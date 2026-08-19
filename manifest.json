@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "ConsoleCapture by E_The_Real",
+  "version": "1.0.2",
+  "description": "Record this tab’s console and save an HTML file Grok can read.",
+  "permissions": ["storage", "unlimitedStorage", "activeTab", "scripting", "downloads", "tabs", "management"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "ConsoleCapture",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "exclude_matches": [
+        "*://grok.com/*",
+        "*://*.grok.com/*",
+        "*://x.ai/*",
+        "*://*.x.ai/*"
+      ],
+      "js": ["capture-main.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "exclude_matches": [
+        "*://grok.com/*",
+        "*://*.grok.com/*",
+        "*://x.ai/*",
+        "*://*.x.ai/*"
+      ],
+      "js": ["capture-isolated.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}

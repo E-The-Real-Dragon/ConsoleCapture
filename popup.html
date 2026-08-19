@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ConsoleCapture</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      width: 300px;
+      padding: 12px;
+      font: 12px/1.4 "Segoe UI", system-ui, sans-serif;
+      background: #12161a;
+      color: #eef3f2;
+    }
+    h1 { font-size: 14px; margin: 0 0 6px; }
+    p { margin: 0 0 10px; color: #9aa8a6; }
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 0 0 6px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    .primary { background: #3aa890; color: #06201b; }
+    .secondary { background: #1b2224; color: #eef3f2; border: 1px solid #2c3a3c; }
+    #status { min-height: 2.4em; }
+  </style>
+</head>
+<body>
+  <h1>ConsoleCapture</h1>
+  <p>Records this tab’s console (errors, warnings, logs) from page start. Save an HTML file for Grok.</p>
+  <p id="status">Checking…</p>
+  <button type="button" class="primary" id="btnSave">Save console to Downloads</button>
+  <button type="button" class="secondary" id="btnClear">Clear buffer for this tab</button>
+  <p>After loading this extension, reload the YouTube tab, wait for the ads/errors, then click Save. File goes to <code>Downloads\ConsoleCapture\</code>. Not used on grok.com.</p>
+  <script src="popup.js"></script>
+</body>
+</html>
