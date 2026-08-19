@@ -29,3 +29,10 @@ The HTML includes a **JSON for Grok** block at the bottom with the same records.
 ## Family
 
 Made by E_The_Real alongside [DeskDrawer](https://github.com/E-The-Real-Dragon/DeskDrawer), [AdHaven](https://github.com/E-The-Real-Dragon/AdHaven), and [PageVault](https://github.com/E-The-Real-Dragon/pagevault).
+
+
+## License
+
+**E_The_Real Source-Available License 1.0** (not MIT/GPL).
+
+You may view, copy, and tweak this project for yourself. You may **not** publish or distribute a modified version without written consent from E_The_Real. See [LICENSE.txt](LICENSE.txt).
